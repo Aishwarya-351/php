@@ -1,0 +1,60 @@
+<?php
+$cars = array("saab","Volvo","BMW","Toyota");
+print_r($cars);
+echo"<br>";
+$x=count($cars);
+echo "$x";
+echo"<br>";
+$i=0;
+for($i=0;$i<count($cars);$i++)
+{
+	echo "$cars[$i]";
+	echo " ";
+}
+echo"<br>";
+
+echo '<br>';
+$ages = array("Peter"=>32,"Quagmire"=>30,"Joe"=>34);
+print_r($ages);
+echo"<br>";
+$x=count($ages);
+echo "$x";
+echo"<br>";
+$agekeys=array_keys($ages);
+for($i=0;$i<count($agekeys);$i++)
+{
+	echo "$agekeys[$i]";
+	echo " ";
+}
+echo"<br>";
+/*
+foreach($ages as &$value)
+{
+	echo "$value";
+	echo " ";
+}
+*/
+echo"<br>";
+$families=array("Griffin"=>array("Peter","lois","Magan"),"Quagmire"=>array("Glenn"));
+print_r($families);
+echo"<br>";
+$x=count($families);
+echo "$x";
+$familykey=array_keys($families);
+echo"<br>";
+/*foreach($familykey as $value)
+{
+	print_r($families[$value]);
+	echo " ";
+}
+echo"<br>";
+*/
+echo "$families[Griffin][2])";
+
+/*foreach($families as $value1) {
+       foreach($value1['2'] as $k) {
+             echo $k;
+       }
+}
+*/
+?>
