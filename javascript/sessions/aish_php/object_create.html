@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//-------------Example 2--------------------------------------------
+function animal (voice)
+{
+	this.voice=voice;
+		}
+	animal.prototype.speak= function() //naother way of defining a function
+	{	console.log(this.voice)	};
+	
+	function cat (name, color)
+	{
+		this.name=name,
+		this.color=color
+	};
+	var obj1=Object.create(animal.prototype); // new cat('Fluffy','white'); if we create by new operator then speak will not be a part of obj1.
+	obj1.voice="meow";
+	obj1.speak();
+
+</script>
+</body>
+</html>

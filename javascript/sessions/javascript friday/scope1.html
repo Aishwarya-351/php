@@ -1,0 +1,107 @@
+<!-- example1 -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<p> if you assign a value to a variable that has not been declared,
+then it will automatically become a GLOBAL variable:
+</p>
+<p id="demo"></p>
+<script>
+"use strict";
+my_func();
+//var carName="Mercedes";
+document.getElementById("demo").innerHTML="I can display" + " "+carName;
+
+function my_func()
+{
+carName="Mercedes";
+}
+</script>
+</body>
+</html> -->
+
+
+<!-- example3 -->
+<!-- <!DOCTYPE html>
+<html>
+<body> 
+<script>
+"use strict";
+//var anumber=100;
+tweak();
+ 
+ function tweak()
+ {
+ document.write(anumber);
+ 
+ if(true)//given undefined because number is in the local scope. where the function is not initialized..
+ {
+ var anumber=123;
+ }
+ }
+</script>
+</body> </html>
+ -->
+
+
+<!-- 
+
+//example4
+<!DOCTYPE html>
+<html>
+<body> 
+<script>
+"use strict";
+function send(name)
+{
+	//local varibale 'name' is stored in the closure
+	//for the inner function
+	return function()
+	{
+	sendHi(name);
+	}
+}
+function sendHi(msg)
+{
+console.log("hello" +msg);
+}
+var func= send("Bill");
+func();// hello bill
+
+sendHi ("pete");
+func(); //override takes place. so output is hello bill... nnot hello pete
+</script>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html> // output is x=2 y=2......... displays 6 times of 2 in alternate of x and y.
+<html>
+<body> 
+<script>
+"use strict";
+var x=10;
+var y=10;
+{
+//function bl()
+{
+x=5;
+ y=5;	}
+{
+var x=2;
+var y=2;
+document.write("x:" + x + "<br/>"); 
+document.write("y:" + y + "<br/>");
+}
+document.write("x:" + x + "<br/>");
+document.write("y:" + x + "<br/>");
+}
+document.write("x:" + x + "<br/>");
+document.write("y:" + x + "<br/>");
+//var z= bl();
+//document.write("z:" + z + "<br/>");
+</script>
+</body>
+</html> -->

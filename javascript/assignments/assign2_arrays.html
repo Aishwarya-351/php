@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<script type="text/javascript">
+				
+		//creating a new Array
+		var noiseArray = new Array();
+		var noiseArray= ["honk", "quack","sneeze"];
+		console.log(noiseArray.length);
+		
+		// add to the beginning
+		noiseArray.unshift("meow");
+		
+		//add to the end
+		noiseArray.push("bark");
+		
+		//using bracket notation
+		noiseArray[noiseArray.length]="yuhu";
+		
+		//the length of the present noiseArray
+		var length=noiseArray.length;
+		
+		//to display the last index
+		var last_index=noiseArray.length-1;
+		
+		//nest the array in the object
+		var animal={username: 'DaffyDuck', tagline: 'Yippeee!', noises: noiseArray};
+		
+		//empty array of animals
+		var animals=[];
+		
+		//add animal from the Object Exercises to the animals array.
+		animals.push(animal);
+		
+		//create a variable called quackers and assign it to this example object
+		var quackers= { username: 'DaffyDuck', tagline: 'Yippeee!', noises: ['quack', 'honk', 'sneeze', 'growl'] };
+		
+		//Add quackers to the animals array using a different method than before
+		animals.unshift(quackers);
+		
+		//2 more Animal objects with their own properties
+		
+		var animal1= { username: 'Monkeys', tagline: 'Monkeyss!', noises: ['chatter 1', 'chatter 2', 'chatter 3', 'chatter 4'] };
+		var animal2= { username: 'Mice', tagline: 'Mice!', noises: ['squeak 1', 'squeak 2', 'squeak 3', 'squeak 4'] };
+		animals[animals.length]=animal1;
+		animals[animals.length]=animal2;
+		
+		//to display the length property of the array
+		var x=animals.length;
+		console.log(x);
+
+		</script>
+
+	</html>

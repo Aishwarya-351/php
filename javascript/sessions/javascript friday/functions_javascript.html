@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Functions demo in javascript</title> 
+</head>
+<body>
+<script>
+function mychoice(theObject)
+{
+	theObject.brand="toyota"
+	theObject.model="corolla"
+	theObject.year="2014";
+	}
+ function show(car)
+ {
+	console.log(car.brand);
+	console.log(car.model);
+	console.log(car.year);
+ }
+// declare variable 'mycar';
+//create and initialize a new object;
+// assign reference to it to mycar;
+ 
+ 
+ var mycar= {
+ brand: "Honda",
+ model: "accord"
+ year : " 1998"
+ };
+ console.log(mycar.brand);
+ mychoice(mycar);
+</script>
+</body>
+</html>

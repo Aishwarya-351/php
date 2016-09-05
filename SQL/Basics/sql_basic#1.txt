@@ -1,0 +1,103 @@
+mysql> create database employee;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use employee;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table emp_detail(emp_id varchar(10),Fname varchar(20),Mname varcha
+r(20),Lname varchar(20),city varchar(20),salary int(10));
+Query OK, 0 rows affected (0.23 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_employee |
++--------------------+
+| emp_detail         |
++--------------------+
+1 row in set (0.00 sec)
+mysql> insert into emp_detail
+    -> values('1cyb01','Aishwarya',' ','Patra','Rourkela','138000');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb02','Deepak','Kumar','Panigrahi','Berhampur','121800');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb03','Shruti','S','Mohanty','Bhubaneshwar','221800');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb04','Pritish','Ranjan','Das','Kolkata','151800');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb05','Jiten','Mahesh','Bagria','Gwalior','21800');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb06','Satarupa','Mitali','Sarkhel','Banaglore','41800');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb07','Subhasmita',' ','Rout','Hyderabad','441800');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb08','Adarshana',' 'Pujari','Sambalpur','221800');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb09','Adyasha','Kumari','Dash','Puri','61800');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into emp_detail
+    -> values('1cyb10','Anindita','A','Panigrahi','Pune','18000');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> show tables;
++-------------------+
+|Tables_in_employee |
++-------------------+
+| emp_detail        |
++-------------------+
+1 row in set (0.02 sec)
+
+mysql> select * from emp_detail;
++---------+------------+-------+----------+-------------+--------+
+| emp_id  | Fname      | Mname | Lname    | city        | salary |
++---------+------------+-------+----------+-------------+--------+
+| 1cyb01  | Aishwarya  |       | Patra    | Rourkela    | 138000 |
+| 1cyb02  | Deepak     | Kumar | Panigrahi| Berhampur   | 121800 |
+| 1cyb03  | Shruti     | s     | Mohanty  | Bhubaneshwar| 221800 |
+| 1cyb04  | Pritish    | Ranjan| Das      | Kolkata     | 151800 |
+| 1cyb05  | Jiten      | Mahesh| Bagria   | Gwalior     |  21800 |
+| 1cyb06  | Satarupa   | Mitali| Sarkhel  | Bangalore   |  41800 |
+| 1cyb07  | Subhasmita |       | Rout     | Hyderabad   | 441800 |
+| 1cyb08  | Adarshana  |       | Pujari   | Sambalpur   | 221800 |
+| 1cyb09  | Adyasha    | Kumari| Dash     | Puri        |  61800 |
+| 1cyb10  | Anandita   | A     | Panigrahi| Pune        |  18000 |
++---------+------------+-------+----------+-------------+--------+
+10 rows in set (0.00 sec)
+
+mysql>mysql> SELECT CONCAT(Fname,'', Mname,'', Lname) from emp_detail;
++-----------------------------+
+| CONCAT(Fname,'', Mname,'', Lname) |
++-----------------------------------+
+| Aishwarya Patra                   |
+| Deepak Kumar Panigrahi            |
+| Shruti S Mohanty                  |
+| Pritish Ranjan Das                |
+| Jiten Mahesh Bagria               |
+| Satarupa Mitali Sarkhel           |
+| Subhasmita Rout                   |
+| Adarshana Pujari                  |
+| Adyasha Kumari Dash               |
+| Anandita A Panigrahi              |
++-----------------------------------+
+10 rows in set (0.00 sec)
+
+
+

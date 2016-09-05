@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+	var friends= [];
+	var animals=['Duck','Camel'];
+	for(var i=0;i < 2;i++){
+		friends[i]=animals[i];
+	}
+	console.log(friends);
+
+//create an empty object to the variable relationships 
+var relationships= new Object();//first declaration of object:length:undefined
+
+// add friends data structure to the relationships object
+relationships.friends=friends;
+
+//display the relationships content
+console.log(relationships);
+
+//length of the relationship object
+console.log(relationships.length);
+
+//create an empty array for matches
+var matches= [];
+
+//add the matches array to the relationships object
+relationships.matches=matches;
+console.log(relationships);
+
+//using the relationships object, add at at least one username to matches.
+for(var i=0;i < 1;i++){
+	relationships.matches[i]= relationships.friends[i];
+}
+//looping through the animals collection
+console.log(relationships);
+for(var i=0;i < animals.length;i++){
+	animals[i]= {relationships};
+}
+console.log(animals);
+</script>
+</body>
+</html>

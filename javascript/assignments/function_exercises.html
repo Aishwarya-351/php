@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+   	function AnimalTestUser(name,color,friends){
+		
+		
+		var otherArgs=[];
+		
+			if(arguments.length >1)
+			{
+        for(var i=1;i < arguments.length; i++)
+		{
+          otherArgs.push(arguments[i]);
+        }
+      }
+		
+		
+		this.username= name;
+		this.color=color;
+		this.friends=friends;
+		return{username:name,otherArgs: otherArgs};
+		
+        
+	}
+		var testSheep = new AnimalTestUser('CottonBall', 'white', [1,2,3] );
+console.log(testSheep);    
+ 
+ function AnimalCreator(username,species,tagline,noises){
+  this.username=username;
+  this.species=species;
+  this.tagline=tagline;
+  this.noises=noises;
+  this.friends=[];
+  return{username:username,species:species,tagline:tagline,noises:noises,friends:[]};
+ } 
+ var sheep = AnimalCreator('Cloud', 'sheep', 'You can count on me!', ['baahhh', 'arrgg', 'chewchewchew']);
+ var cow= AnimalCreator('moo', 'cow', 'You can count on me!', ['baahhh', 'arrgg', 'chewchewchew']);
+ var llama= AnimalCreator('keny', 'llama', 'You can count on me!', ['baahhh', 'arrgg', 'chewchewchew']);
+
+function addFriend(object1,object2){                       
+  object1.friends.push(object2.username);
+
+ } 
+ addFriend(sheep,cow);
+ addFriend(sheep,llama);
+console.log(sheep);
+
+
+ var myFarm=[];
+ myFarm.push(sheep,cow,llama);
+ addFriend(sheep,cow);
+ addFriend(sheep,llama);
+ addFriend(cow,sheep);
+ addFriend(cow,llama);
+ addFriend(llama,cow);
+ addFriend(llama,sheep);
+ console.log(myFarm);
+
+
+ function addMatchesArray(myFarm){
+   for(var i=0;i < myFarm.length;i++){
+     myFarm[i].matches=[];
+   }
+ }
+ addMatchesArray(myFarm);
+ console.log(myFarm[0]);
+
+
+ function giveMatches(a){
+  for(var i=0;i < a.length;i++){
+    
+    a[i].matches[0]=a[i].friends[0];
+  
+  }
+ }
+ giveMatches(myFarm);
+ console.log(myFarm);
+</script>
+</body>
+</html>

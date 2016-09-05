@@ -1,0 +1,2 @@
+preg is the Perl Compatible Regex library
+ereg is the POSIX complient regex library

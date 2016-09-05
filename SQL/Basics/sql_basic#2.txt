@@ -1,0 +1,37 @@
+//It should fetch the fname of an employee whose Emp_id equals to 2.
+mysql> select Fname from emp_detail where emp_id='1cyb02';
++----------+
+| Fname    |
++----------+
+| Deepak   |
++----------+
+1 row in set (0.00 sec)
+
+//It should fetch Non repeating lnames from table emp_detail.
+
+mysql> select distinct Lname from emp_detail;
++----------------+
+| Lname          |
++----------------+
+| Patra          |
+| Panigrahi      |
+| Mohanty        |
+| Das            |
+| Bagria         |
+| Sarkhel        |
+| Rout           |
+| Pujari         |
+| Dash           |
+| Panigrahi      |
++----------------+
+10 rows in set (0.02 sec)
+
+
+mysql> select Fname from emp_detail group by Lname having count(*) > 1
+    -> ;
++---------+
+| Fname   |
++---------+
+| Deepak  |
++---------+
+1 row in set (0.02 sec)

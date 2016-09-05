@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+
+		var animal={};
+		var k=0;
+		animal.username="Daffy Duck";
+		console.log(animal);
+        animal['tagline']="Yipee!!!";
+        console.log(animal);
+        animal['noises']=[];
+        console.log(animal);
+        for(var i in animal){
+        	k++;
+        	if(i==animal.username)
+        		{
+        			alert('My name is :' +i);
+        			//console.log('Hi my name is ' + i);
+                }
+                else if(i==animal.tagline)
+        		{
+        			console.log('I like to say ' + i) ;
+
+        	}
+        }
+         console.log("The total number of properties in the object is: "+k);
+
+	</script>
+
+
+</body>
+</html>

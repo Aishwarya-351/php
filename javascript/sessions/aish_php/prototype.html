@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//-------------Example 1----------------------
+var cat={
+	name: {first:"Fluffy", last:"Schinder"},
+	color:"White"
+};
+
+Object.defineProperty(cat,'fullname',{
+		get:function(){
+			return this.name.first+" "+this.name.last},
+		set:function(val){
+			var value =val.split(' ');
+			this.name.first=value[0];
+			this.name.last=value[1];}
+			}
+);
+
+cat.fullname="Muffin Top"
+console.log(cat.fullname);
+</script>
+</body>
+</html>
+
+

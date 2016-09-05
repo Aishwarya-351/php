@@ -1,0 +1,34 @@
+mysql> CREATE USER 'end_user'@localhost IDENTIFIED BY 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select user,host from mysql.user;
++----------+-----------+
+| user     | host      |
++----------+-----------+
+| root     | 127.0.0.1 |
+| root     | ::1       |
+|          | localhost |
+| end_user | localhost |
+| pma      | localhost |
+| root     | localhost |
++----------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> grant select, insert, update, delete on employee.emp_detail to 'end_user'@'localho
+st';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE USER 'admin'@localhost IDENTIFIED BY 'admin';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant select, insert, update, delete,create,alter on employee.emp_detail to 'adm
+in'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE USER 'super_admin'@localhost IDENTIFIED BY 'super';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all on employee.emp_detail to super_admin@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
