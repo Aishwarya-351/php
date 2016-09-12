@@ -1,0 +1,35 @@
+<!DOCTUYPE html>
+<html>
+<head>
+<title> Angular Controllers</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="my_app" ng-controller= "my_control">
+<h1><center> Try with different names</center></h1>
+
+<div>
+<label>FirstName: </label>
+<input type="text" ng-model="firstname"></br>
+</div>
+
+<div>
+<label>LastName: </label>
+<input type="text" ng-model="lastname"></br>
+</div>
+
+<p> Hello, {{firstname + " " +lastname}}
+
+ <!-- <p> Hello <span ng-bind= "firstname" + " " + ng-bind="lastname"</span>..!!</p>
+ <p>Hello <span ng-bind= "lastname"></span>..!!</p> -->
+
+ <script>
+var app=angular.module('my_app',[]);
+app.controller('my_control', function($scope)
+		{
+		$scope.firstname="Enter your first name";
+		$scope.lastname="Enter your last name";
+		});
+</script>
+</body>
+</html>

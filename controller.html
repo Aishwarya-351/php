@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+		<title>Hello Angular</title>
+</head>
+<body ng-controller="HomeController">
+	<h1><center>Controller with  $scope, but without using the ng-model</center></h1>
+	<h2>Message from Controller : {{message}}</h2>
+	<h3>Parameter passed:{{name}}
+	<div>
+	<input ng-model="name">
+	<input type="button" value="Say Hello" ng-click="sayHello(name)"/>
+	</div>
+	
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+			
+			<script type="text/javascript">
+				var myApp=angular.module('myApp',[]);
+			<!--	document.write('Module is created');
+				
+				myApp.controller('HomeController',['$scope', function ($scope)
+				{
+					$scope.message='Hello Angular';
+					$scope.sayHello=function(name){
+					$scope.message='Hello ' +"" +name;
+					}
+				}]);
+			</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+		<title>Hello Angular</title>
+</head>
+<body ng-controller="HomeController">
+	<h1>Iterate over the arrays</h1>
+
+	<div ng-repeat="player in fg">
+	Name :<span ng-bind="player.name" ></span><br>
+	City :<span ng-bind="player.city" ></span><hr/>
+	</div>
+	
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+			
+			<script type="text/javascript">
+				var myApp=angular.module('myApp',[]);
+		        
+
+
+		//document.write('Module is created');
+				
+				myApp.controller('HomeController',['$scope', function ($scope)
+				{ 
+				$scope.fg=[
+				{employeeId:1, name:"heli", city: "ahmedabad"},
+				{employeeId:2, name:"aish", city: "rourkela"},
+				{employeeId:3, name:"manasi", city: "pune"}
+				];
+				}]);
+			</script>
+</body>
+</html>

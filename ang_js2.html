@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app> <!-- 1st step -->
+<head> 
+<title> Angular JS1 </title>
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+</head>
+<body >
+
+<h1> <center>First JS Application</center></h1>
+<div data-ng-init=" quantity=1; cost=30; student={firstname:'aishwarya', lastname:'patra', rollnum:351}; marks=[40,50,60,70,80]">
+<label> Name : </label>
+<input type="text" ng-model ="name" placeholder="Enter your name" /> <!-- /*2nd step */ -->
+ <p> Hello {{student.firstname + " " +student.lastname + " " +student.rollnum + " " +student.marks}}
+ <span data-ng-bind="name"></span>..! </p> <!-- /3rd step */ -->
+ <p>List of Countries with locale :</p>
+  <ol>
+  <li ng-repeat="country in countries" > <!-- 4th step: to access each html elements(repeatedly) -->
+   {{'Country : ' +country.name + ', Locale: ' +country.locale}}
+   </li>
+   </ol>
+   </div>
+ 
+ 
+ 
+ 
+ 
+ </div>
+
+</body>
+</html>  
