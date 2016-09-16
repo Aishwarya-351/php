@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="validate.js"></script>
+	</head>
+	<body bgcolor="#EC7C64">
+		<br><br><br><center><form name="valform" action="submit.html" onsubmit="return form_validation()" method="POST">
+			<table cellpadding="10">
+				<tr>
+					<td>
+						<label >Name<span style="color:red;">*</span></label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<input type="text" name="name" value="" id="name" maxlength="40" autofocus />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label >Age</label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<input type="text" name="age" value="" id="age"  maxlength="3" onkeypress='return checkNum(event)'/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label >Email<span style="color:red;">*</span></label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<input type="text" name="email" value="" id="email" maxlength="40" pattern="[a-z0-9]+@[a-z0-9]+.com$" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label >Confirm Email</label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<input type="text" name="confemail" value="" id="confemail" maxlength="40" size="20" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label >Country</label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<select name="country" value="" id="country" >
+							<option selected="" value="Default">(Please select a country)</option>  
+							<option value="AG">Afghanistan</option>
+							<option value="AF">Australia</option>  
+							<option value="AL">Canada</option>  	
+							<option value="DZ">India</option>  
+							<option value="AS">Russia</option>  
+							<option value="AD">USA</option>  
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Interests</label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<textarea name="interests" value="" id="interests" rows="4" cols="22" maxlength="200" onkeyup='checkRemain(event)'></textarea> <span id="remainChar"> 200 </span> Characters remaining
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Branch<span style="color:red;">*</span></label>
+					</td>
+					<td>
+						<label >:</label>
+					</td>
+					<td>
+						<input type="radio" name="branch" value="Computer" id="branch1" onclick="checkCom(event)">Computer
+						<input type="radio" name="branch" value="Electronics" id="branch2" onclick="checkCom(event)">Electronics
+						<input type="radio" name="branch" value="IT" id="branch3" onclick="checkCom(event)">IT
+						<input type="radio" name="branch" value="Mechanical" id="branch4" onclick="checkCom(event)">Mechanical
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<label>Skills</label>
+					</td>
+					<td rowspan="2">
+						<label >:</label>
+					</td>
+					<td>
+						<input type="checkbox" name="c1" value="HTML" id="html" onclick="checkUncheck()"/>HTML
+						<input type="checkbox" name="c1" value="PHP" id="php" onclick="checkUncheck()"/>PHP
+						<input type="checkbox" name="c1" value="CSS" id="css" onclick="checkUncheck()"/>CSS
+						<input type="checkbox" name="c1" value="JAVA" id="java" onclick="checkUncheck()"/>JAVA
+						<input type="checkbox" name="c1" value="VLSI" id="vlsi" onclick="checkUncheck()"/>VLSI
+						<input type="checkbox" name="c1" value="AutoCad" id="autocad" onclick="checkUncheck()"/>AutoCad
+						<input type="checkbox" name="c1" value="JQuery" id="jquery" onclick="checkUncheck()"/>JQuery
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="checkall" id="checkall" value="Check All" onclick="checkAll(event);"/>Check All
+						<input type="checkbox" name="uncheckall" id="uncheckall" value="Uncheck All" onclick="ucheckAll(event);"/>Uncheck All						
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+					<td>
+					<td>
+						<input type="submit" value="Submit" id="submit" />
+					</td>			
+				</tr>
+			</table>
+		</form></center>
+	</body>
+</html>
